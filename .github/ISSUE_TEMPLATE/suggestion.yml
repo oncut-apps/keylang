@@ -1,0 +1,15 @@
+name: Suggestion
+description: A language, a layout or a feature you would like KeyLang to support.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like KeyLang to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: When would you use it?
+      description: A real situation helps more than a general wish.

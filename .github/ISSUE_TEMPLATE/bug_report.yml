@@ -1,0 +1,66 @@
+name: Bug report
+description: Something in KeyLang does not work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This tracker is public.** Please do not paste text you typed, passwords, clipboard contents or log files. Describe what happened in your own words; if we need a log, we will ask and tell you what is safe to share.
+  - type: input
+    id: version
+    attributes:
+      label: KeyLang version
+      description: Shown in Settings, About & licence.
+      placeholder: "1.0.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: System
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux (X11 session)
+    validations:
+      required: true
+  - type: input
+    id: linux
+    attributes:
+      label: Linux distribution and desktop
+      description: Only for Linux.
+      placeholder: "Ubuntu 24.04, GNOME on Xorg"
+  - type: input
+    id: layouts
+    attributes:
+      label: Keyboard layouts installed
+      placeholder: "English (US), Greek"
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: Application you were typing in
+      placeholder: "Firefox, Word, a terminal..."
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often
+      options:
+        - Every time
+        - Sometimes
+        - Once so far
+    validations:
+      required: true
