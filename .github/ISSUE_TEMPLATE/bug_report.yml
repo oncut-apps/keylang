@@ -10,7 +10,7 @@ body:
     id: version
     attributes:
       label: KeyLang version
-      description: Shown in Settings, About & licence.
+      description: Shown in Settings, About & license.
       placeholder: "1.0.1"
     validations:
       required: true

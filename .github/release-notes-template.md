@@ -11,11 +11,12 @@ Title of the release: "oncut KeyLang {version}", tag "v{version}".
 
 | File | For | SHA-256 |
 | --- | --- | --- |
-| `oncut_KeyLang-{version}-windows-x64.zip` | Windows 10 and 11; 14-day trial, a license key unlocks it | `{sha256}` |
+| `oncut_KeyLang-{version}-windows-x64-setup.exe` | Windows 10 and 11; 14-day trial, a license key unlocks it | `{sha256}` |
 | `oncut_KeyLang-{version}-x86_64.AppImage` | Linux, X11 session; free | `{sha256}` |
 
-The same files are at <https://apps.oncut.gr/keylang>. Windows: unzip anywhere
-and run `oncut KeyLang.exe` (signed by oncut). Linux: `chmod +x` the AppImage
+`SHA256SUMS` and `SHA256SUMS.minisig` are attached too. The same files are at
+<https://apps.oncut.gr/keylang>. Windows: run the installer (per user, no
+administrator rights; installer and application signed by oncut). Linux: `chmod +x` the AppImage
 and run it; Ubuntu 24.04 needs `sudo apt install libfuse2t64` once.
 
 ## Checking the files
@@ -26,7 +27,7 @@ sha256sum -c --ignore-missing SHA256SUMS
 ```
 
 The first command proves `SHA256SUMS` comes from oncut, the second that your
-file matches it.
+file matches it. Release key id: `3AA1B9E2CD1C2AE8`.
 
 ## Licenses
 

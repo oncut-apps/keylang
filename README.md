@@ -39,7 +39,7 @@ leaves your computer.
 | Price | EUR 9.90, VAT included, one payment | free | not yet |
 | Trial | 14 days, same download | not needed | |
 | License key | by email within one business day | none | |
-| Package | portable ZIP, signed by oncut | AppImage | |
+| Package | installer, signed by oncut | AppImage | |
 
 Buy at <https://apps.oncut.gr/keylang>. Refunds within 14 days, no questions
 asked: <https://apps.oncut.gr/refunds>.
@@ -50,8 +50,10 @@ Get the current version from [Releases](../../releases) or from
 <https://apps.oncut.gr/keylang>. Both carry the same files with the same
 SHA-256 checksums.
 
-- **Windows:** unzip anywhere and run `oncut KeyLang.exe`. Nothing is installed.
-  The executable is signed by oncut (Authenticode).
+- **Windows:** run the installer. It installs for your user account only,
+  needs no administrator rights, and asks you to accept the End-User License
+  Agreement. The installer and the application are signed by oncut
+  (Authenticode).
 - **Linux:** make the AppImage executable (`chmod +x oncut_KeyLang-*.AppImage`)
   and run it. It needs an X11 session; Wayland is not supported, because it lets
   no application see what is typed into other windows. On Ubuntu 24.04 an
@@ -73,14 +75,15 @@ Run them in that order. The first proves the checksum list comes from oncut; the
 second proves your file matches it. The checksum alone only catches a broken
 download.
 
-<!-- Release key id: add it here once the key exists (KEYLANG-LAUNCH.md, D7),
-     so the key can be checked against a second, independent source. -->
+The release key id is **`3AA1B9E2CD1C2AE8`**. It must match the one on
+<https://apps.oncut.gr/keys>: the key and this README reach you by two
+different routes, which is what makes the check worth doing.
 
 ## Requirements
 
 - Windows 10 or 11 (64-bit), or Linux x86_64 in an X11 session.
 - The keyboard layouts you type in, installed as usual.
-- No administrator rights and no installer.
+- No administrator rights: the Windows installer installs for your user account only.
 
 ## Privacy
 
