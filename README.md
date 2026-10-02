@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/keylang-banner.jpg" alt="oncut KeyLang showing its wrong-layout warning: you typed kalhmera, possible correction καλημέρα" width="800">
+  <img src="assets/keylang-banner.jpg" alt="oncut KeyLang showing two wrong-layout warnings: ghbdtn corrected to привет (Russian), kalhmera corrected to καλημέρα (Greek)" width="800">
 </p>
 
 # oncut KeyLang
@@ -31,6 +31,24 @@ leaves your computer.
   in chosen applications, start it when you sign in.
 - **Nothing leaves your computer.** No telemetry, no crash uploads, no automatic
   updates. What you type is examined in memory and discarded.
+
+## Examples
+
+One word in each of the eight languages, typed with the wrong layout on:
+
+| Language | You typed | Layout on | You meant |
+| --- | --- | --- | --- |
+| Russian | `ghbdtn` | English | `привет` |
+| Ukrainian | `ghbdsn` | English | `привіт` |
+| Greek | `kalhmera` | English | `καλημέρα` |
+| Hebrew | `akuo` | English | `שלום` |
+| Arabic | `lvpfh` | English | `مرحبا` |
+| German | `ywei` | English | `zwei` |
+| French | `qvec` | English | `avec` |
+| English | `руддщ` | Russian | `hello` |
+
+German and French share most keys with English, so only words that differ on
+the keyboard (Y and Z on German; A, Q, Z and W on French) can be told apart.
 
 ## Editions
 
