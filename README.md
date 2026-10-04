@@ -4,7 +4,7 @@
 
 # oncut KeyLang
 
-**Smart Keyboard Language Monitor.** You meant `привет` and typed `ghbdtn`.
+**Keyboard layout checker.** You meant `привет` and typed `ghbdtn`.
 KeyLang notices after one word, shows you what you meant, and switches the
 keyboard layout with a click. It lives in the system tray, and nothing you type
 leaves your computer.
