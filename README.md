@@ -24,8 +24,8 @@ leaves your computer.
   words, so KeyLang does not warn about it again.
 - **Fixes what you already typed.** Select text and press `Ctrl+Alt+Shift+R` to
   convert and replace it in place, capitals kept and Greek accents restored.
-- **Eight languages.** Russian, Ukrainian, Greek, Hebrew, Arabic, German and
-  French, each with English, and non-Latin layouts against each other, such as
+- **Eight languages.** Arabic, French, German, Greek, Hebrew, Russian and
+  Ukrainian, each with English, and non-Latin layouts against each other, such as
   Hebrew and Greek. On Windows it also notices a Chinese Pinyin input method
   left on while you type English.
 - **Stays out of the way.** No window, only a tray icon. Pause it, switch it off
@@ -39,21 +39,21 @@ One word in each of the eight languages, typed with the wrong layout on:
 
 | Language | You typed | Layout on | You meant |
 | --- | --- | --- | --- |
-| Russian | `ghbdtn` | English | `привет` |
-| Ukrainian | `ghbdsn` | English | `привіт` |
+| Arabic | `lvpfh` | English | `مرحبا` |
+| English | `руддщ` | Russian | `hello` |
+| French | `qvec` | English | `avec` |
+| German | `ywei` | English | `zwei` |
 | Greek | `kalhmera` | English | `καλημέρα` |
 | Hebrew | `akuo` | English | `שלום` |
-| Arabic | `lvpfh` | English | `مرحبا` |
-| German | `ywei` | English | `zwei` |
-| French | `qvec` | English | `avec` |
-| English | `руддщ` | Russian | `hello` |
+| Russian | `ghbdtn` | English | `привет` |
+| Ukrainian | `ghbdsn` | English | `привіт` |
 
 German and French share most keys with English, so only words that differ on
 the keyboard (Y and Z on German; A, Q, Z and W on French) can be told apart.
 
 ## Editions
 
-| | Windows 10 and 11 | Linux, X11 session | macOS |
+| | Windows 10 and 11 | Linux, X11 and Wayland | macOS |
 | --- | --- | --- | --- |
 | Price | EUR 9.90, VAT included, one payment | free | not yet |
 | Trial | 14 days, same download | not needed | |
@@ -74,15 +74,21 @@ SHA-256 checksums.
   Agreement. The installer and the application are signed by oncut
   (Authenticode).
 - **Linux:** make the AppImage executable (`chmod +x oncut_KeyLang-*.AppImage`)
-  and run it. It needs an X11 session; Wayland is not supported, because it lets
-  no application see what is typed into other windows. On Ubuntu 24.04 an
-  AppImage needs FUSE once: `sudo apt install libfuse2t64`.
+  and run it. In an X11 session it works on any desktop. Under Wayland it works
+  on KDE Plasma and GNOME through [Fcitx5](https://fcitx-im.org): Wayland lets
+  no ordinary application see what is typed into other windows, but an input
+  method can, so a small KeyLang addon loaded into your own Fcitx5 passes the
+  keys on. KeyLang offers to set this up at its first start, installs the addon
+  in your home folder, and can undo all of it. Other Wayland desktops are not
+  supported. On Ubuntu 24.04 an AppImage needs FUSE once:
+  `sudo apt install libfuse2t64`.
 
 To check that a file came from oncut, see [Checking a download](#checking-a-download).
 
 ## Requirements
 
-- Windows 10 or 11 (64-bit), or Linux x86_64 in an X11 session.
+- Windows 10 or 11 (64-bit), or Linux x86_64: an X11 session, or Wayland on
+  KDE Plasma or GNOME with Fcitx5.
 - The keyboard layouts you type in, installed as usual.
 - No administrator rights: the Windows installer installs for your user account only.
 
